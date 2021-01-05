@@ -44,7 +44,7 @@ UNLOCK TABLES;
 
 
 -- 2. Создать все необходимые внешние ключи и диаграмму отношений.
-  -- image: er.png
+https://github.com/armen2009/study/blob/main/mysql/lesson6/er.png
 
 -- 3. Определить кто больше поставил лайков (всего) - мужчины или женщины?
 
