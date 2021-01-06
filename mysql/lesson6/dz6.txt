@@ -47,12 +47,19 @@ UNLOCK TABLES;
 https://github.com/armen2009/study/blob/main/mysql/lesson6/er.png
 
 -- 3. Определить кто больше поставил лайков (всего) - мужчины или женщины?
-
+select concat(
+	'Общее колличество лайков мужчин = ',
+	(SELECT sum(gender) as gender_m FROM profiles where gender = 'm'),
+	', ',
+	'общее колличество лайков женщин = ',
+	(SELECT sum(gender) as gender_f FROM profiles where gender = 'f')
+	) 
+as gender_likes;
 
 -- 4. Подсчитать количество лайков которые получили 10 самых молодых пользователей. 
+
 
 
 -- 5. Найти 10 пользователей, которые проявляют наименьшую активность в
 -- использовании социальной сети
 -- (критерии активности необходимо определить самостоятельно).
-
